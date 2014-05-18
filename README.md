@@ -1,17 +1,17 @@
 # CheeseCake: a modern sampler for New York Times feeds
 
-Just a weekend hack for #nytfeedfun, see [Dave Winer's challenge](0).
+Just a weekend hack for #nytfeedfun, see [Dave Winer's challenge][0].
 
 [0]: http://scripting.com/2014/05/16/?#a1400253877
 
-Built with [Mojolicious](1), [AngularJS](2), and some boredom.
+Built with [Mojolicious][1], [AngularJS][2], and some boredom.
 
 [1]: http://mojolicio.us
 [2]: http://angularjs.org
 
 ## RUNNING
 
-As long as you have a recent Perl (5.14 and up,) with [Carton](3),
+As long as you have a recent Perl (5.14 and up,) with [Carton][3],
 just do
 
     $ carton install
