@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" ng-app="NYTFeedFun">
+  <head>
+    <meta charset="utf-8">
+    <title>NYT Feed Fun</title>
+  </head>
+  <body>
+    <div ng-view></div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script>
+    <script src="nytfeedfun/app.js"></script>
+    <script src="nytfeedfun/services.js"></script>
+    <script src="nytfeedfun/controllers.js"></script>
+  </body>
+</html>

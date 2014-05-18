@@ -1,0 +1,10 @@
+<h1>{{ feed.title }}</h1>
+
+<a href="#/index">Back to Index</a>
+
+<div class="item" ng-repeat="item in feed.items">
+  <p><a href="{{ item.guid }}">{{ item.title }}</a></p>
+  <p>{{ item.dc.creator }}</p>
+  <p>Published on {{ item.pubDate }}</p>
+  <p ng-bind-html="item.description"></p>
+</div>

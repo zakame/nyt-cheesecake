@@ -1,0 +1,9 @@
+<h1>New York Times RSS feeds</h1>
+
+<p>Select a feed from below:</p>
+
+<div class="feeds">
+    <ul ng-repeat="feed in feeds">
+      <li><strong><a href="#/feed/{{ feed.id }}">{{ feed.title }}</a></strong></li>
+    </ul>
+</div>
