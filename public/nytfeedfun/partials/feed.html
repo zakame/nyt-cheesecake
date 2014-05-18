@@ -1,8 +1,10 @@
 <h1>{{ feed.title }}</h1>
 
+<input type="text" ng-model="search" placeholder="Search news...">
+
 <a href="#/feeds">Back to Index</a>
 
-<div class="item" ng-repeat="item in feed.items">
+<div class="item" ng-repeat="item in feed.items | filter:search">
   <p><a href="{{ item.guid }}">{{ item.title }}</a></p>
   <p>{{ item.dc.creator }}</p>
   <p>Published on {{ item.pubDate }}</p>
