@@ -14,7 +14,7 @@ Built with [Mojolicious][1], [AngularJS][2], and some boredom.
 As long as you have a recent Perl (5.14 and up,) with [Carton][3],
 just do
 
-    $ carton install
+    $ carton install --deployment
     $ carton exec morbo script/cheese_cake
 
 And visit http://localhost:3000 .
