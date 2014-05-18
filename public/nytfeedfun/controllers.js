@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('NYTFeedFun.controllers', ['ngSanitize'])
-  .controller('Index', ['$scope', 'Feeds', function($scope, Feeds) {
+  .controller('Feeds', ['$scope', 'Feeds', function($scope, Feeds) {
     $scope.feeds = Feeds.query();
   }])
 

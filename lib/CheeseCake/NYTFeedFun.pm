@@ -54,9 +54,4 @@ sub feeds {
     );
 }
 
-sub index {
-    my $self = shift;
-    $self->respond_to( any => { template => 'nytfeedfun' } );
-}
-
 1;

@@ -6,7 +6,7 @@ angular.module('NYTFeedFun', [
   'NYTFeedFun.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/index', {templateUrl:'nytfeedfun/partials/index.html', controller:'Index'});
+  $routeProvider.when('/feeds', {templateUrl:'nytfeedfun/partials/feeds.html', controller:'Feeds'});
   $routeProvider.when('/feed/:feedId', {templateUrl:'nytfeedfun/partials/feed.html', controller:'Feed'});
-  $routeProvider.otherwise({redirectTo:'/index'});
+  $routeProvider.otherwise({redirectTo:'/feeds'});
 }]);
