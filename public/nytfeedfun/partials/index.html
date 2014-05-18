@@ -4,6 +4,6 @@
 
 <div class="feeds">
     <ul ng-repeat="feed in feeds">
-      <li><strong><a href="#/feed/{{ feed.id }}">{{ feed.title }}</a></strong></li>
+      <li><strong><a ng-href="#/feed/{{ feed.id }}">{{ feed.title }}</a></strong></li>
     </ul>
 </div>
