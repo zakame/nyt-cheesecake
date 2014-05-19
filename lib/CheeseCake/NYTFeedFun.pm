@@ -48,6 +48,7 @@ sub feeds {
         any => {
             json => {
                 title => $rss->{channel}->{title},
+                link  => $rss->{channel}->{link},
                 items => [ $rss->items ]
             }
         }
