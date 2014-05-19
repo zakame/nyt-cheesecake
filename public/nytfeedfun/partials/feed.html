@@ -1,11 +1,11 @@
-<h1>{{ feed.title }}</h1>
+<h1><a ng-href="{{ feed.link }}">{{ feed.title }}</a></h1>
 
 <input type="text" ng-model="search" placeholder="Search news...">
 
 <a href="#/feeds">Back to Index</a>
 
 <div class="item" ng-repeat="item in feed.items | filter:search">
-  <p><a href="{{ item.guid }}">{{ item.title }}</a></p>
+  <h2><a ng-href="{{ item.guid }}">{{ item.title }}</a></h2>
   <p>{{ item.dc.creator }}</p>
   <p>Published on {{ item.pubDate }}</p>
   <p ng-bind-html="item.description"></p>
