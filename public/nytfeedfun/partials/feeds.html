@@ -2,8 +2,6 @@
 
 <p>Select a feed from below:</p>
 
-<div class="feeds">
-    <ul ng-repeat="feed in feeds | filter:search.terms">
-      <li><strong><a ng-href="#/feed/{{ feed.id }}" ng-click="search.terms=''">{{ feed.title }}</a></strong></li>
-    </ul>
+<div class="list-group">
+  <a class="list-group-item" ng-repeat="feed in feeds | filter:search.terms" ng-href="#/feed/{{ feed.id }}" ng-click="search.terms=''">{{ feed.title }}</a>
 </div>
