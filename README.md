@@ -8,6 +8,8 @@ Built with [Mojolicious][1], [AngularJS][2], and some boredom.  In fact,
 it is mainly a way for me to learn more about AngularJS and other frontend
 stuff, while retaining a solid backend in Perl :smiling_imp:
 
+And, why _CheeseCake_?  Dave's post had an image of it, so there...
+
 [1]: http://mojolicio.us
 [2]: http://angularjs.org
 
