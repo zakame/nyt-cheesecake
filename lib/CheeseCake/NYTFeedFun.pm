@@ -44,12 +44,18 @@ sub feeds {
     my $xml = $ua->get( $feed->{xmlUrl} )->res->body;
     my $rss = XML::RSS::LibXML->new->parse($xml);
 
+    my $items;
+    for my $item ( $rss->items ) {
+        $item->{description} =~ s/<img width='1' height='1'.*$//;
+        push @$items, $item;
+    }
+
     $self->respond_to(
         any => {
             json => {
                 title => $rss->{channel}->{title},
                 link  => $rss->{channel}->{link},
-                items => [ $rss->items ]
+                items => $items
             }
         }
     );
