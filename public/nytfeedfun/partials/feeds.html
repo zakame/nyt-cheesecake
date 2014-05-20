@@ -1,11 +1,9 @@
-<input type="text" ng-model="search" placeholder="Search feeds...">
-
 <h1>New York Times RSS feeds</h1>
 
 <p>Select a feed from below:</p>
 
 <div class="feeds">
-    <ul ng-repeat="feed in feeds | filter:search">
-      <li><strong><a ng-href="#/feed/{{ feed.id }}">{{ feed.title }}</a></strong></li>
+    <ul ng-repeat="feed in feeds | filter:search.terms">
+      <li><strong><a ng-href="#/feed/{{ feed.id }}" ng-click="search.terms=''">{{ feed.title }}</a></strong></li>
     </ul>
 </div>

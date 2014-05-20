@@ -13,13 +13,35 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <nav class="nav navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">NYTFeedFun</a>
+        </div>
+        <div ng-controller="Search" class="collapse navbar-collapse" id="navbar-collapse">
+          <form novalidate class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" ng-model="search.terms" class="form-control" placeholder="Search...">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div ng-cloak class="container">
       <div ng-view></div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="nytfeedfun/app.js"></script>
     <script src="nytfeedfun/services.js"></script>
     <script src="nytfeedfun/controllers.js"></script>

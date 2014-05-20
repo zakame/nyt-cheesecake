@@ -1,10 +1,6 @@
-<input type="text" ng-model="search" placeholder="Search news...">
-
-<a href="#/feeds">Back to Index</a>
-
 <h1><a ng-href="{{ feed.link }}">{{ feed.title }}</a></h1>
 
-<div class="panel panel-default" ng-repeat="item in feed.items | filter:search">
+<div class="panel panel-default" ng-repeat="item in feed.items | filter:search.terms">
   <div class="panel-heading">
     <h2>
       <a class="clearfix" ng-href="{{ item.guid }}">{{ item.title }}</a>

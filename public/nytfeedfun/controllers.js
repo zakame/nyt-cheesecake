@@ -1,11 +1,18 @@
 'use strict';
 
 angular.module('NYTFeedFun.controllers', ['ngSanitize'])
-  .controller('Feeds', ['$scope', 'Feeds', function($scope, Feeds) {
-    $scope.feeds = Feeds.query();
+  .controller('Search', ['$scope', 'Search', function($scope, Search) {
+    $scope.search = Search;
   }])
 
-  .controller('Feed', ['$scope', '$routeParams', 'Feeds',
-  function($scope, $routeParams, Feeds) {
-    $scope.feed = Feeds.get({feedId: $routeParams.feedId});
+  .controller('Feeds', ['$scope', 'Feeds', 'Search',
+  function($scope, Feeds, Search) {
+    $scope.feeds  = Feeds.query();
+    $scope.search = Search;
+  }])
+
+  .controller('Feed', ['$scope', '$routeParams', 'Feeds', 'Search',
+  function($scope, $routeParams, Feeds, Search) {
+    $scope.feed   = Feeds.get({feedId: $routeParams.feedId});
+    $scope.search = Search;
   }]);
