@@ -2,6 +2,7 @@
 
 angular.module('NYTFeedFun', [
   'ngRoute',
+  'angular-loading-bar',
   'NYTFeedFun.services',
   'NYTFeedFun.controllers'
 ]).
