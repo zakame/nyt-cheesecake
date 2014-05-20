@@ -4,7 +4,9 @@ Just a weekend hack for #nytfeedfun, see [Dave Winer's challenge][0].
 
 [0]: http://scripting.com/2014/05/16/?#a1400253877
 
-Built with [Mojolicious][1], [AngularJS][2], and some boredom.
+Built with [Mojolicious][1], [AngularJS][2], and some boredom.  In fact,
+it is mainly a way for me to learn more about AngularJS and other frontend
+stuff, while retaining a solid backend in Perl :smiling_imp:
 
 [1]: http://mojolicio.us
 [2]: http://angularjs.org
@@ -27,7 +29,8 @@ using the JavaScript libs via Google.
 
 ## TODO
 
-- A better look and feel lol: thinking about Plurk-style timeline...
+- ~~A better look and feel lol: thinking about Plurk-style timeline...~~
+  Somewhat done, it looks more of a mobile-friendly feed reader now.
 - Add Karma and Protractor tests
 
 ## LICENSE
