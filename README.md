@@ -11,8 +11,8 @@ Built with [Mojolicious][1], [AngularJS][2], and some boredom.
 
 ## RUNNING
 
-As long as you have a recent Perl (5.14 and up,) with [Carton][3],
-just do
+As long as you have a recent Perl (5.14 and up,) with [Carton][3], and
+[libxml2][4], just do
 
     $ carton install --deployment
     $ carton exec morbo script/cheese_cake
@@ -23,6 +23,7 @@ Internet connection required for pulling the OPML/RSS as well as
 using the JavaScript libs via Google.
 
 [3]: https://metacpan.org/pod/Carton
+[4]: http://xmlsoft.org/
 
 ## TODO
 
