@@ -2,7 +2,9 @@
 
 angular.module('NYTFeedFun.services', ['ngResource'])
   .factory('Search', [function() {
-    return {terms:''};
+    var search = {terms:''};
+    search.reset = function() { search.terms = '' };
+    return search;
   }])
 
   .factory('Feeds', ['$resource', function($resource) {

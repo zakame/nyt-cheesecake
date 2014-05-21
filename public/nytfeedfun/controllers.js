@@ -9,10 +9,12 @@ angular.module('NYTFeedFun.controllers', ['ngSanitize'])
   function($scope, Feeds, Search) {
     $scope.feeds  = Feeds.query();
     $scope.search = Search;
+    $scope.search.reset();
   }])
 
   .controller('Feed', ['$scope', '$routeParams', 'Feeds', 'Search',
   function($scope, $routeParams, Feeds, Search) {
     $scope.feed   = Feeds.get({feedId: $routeParams.feedId});
     $scope.search = Search;
+    $scope.search.reset();
   }]);
