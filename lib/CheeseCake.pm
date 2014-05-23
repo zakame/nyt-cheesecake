@@ -12,7 +12,7 @@ sub startup {
   my $r = $self->routes;
 
   # NYTFeedFun
-  $r->get('/')->to(cb => sub { shift->redirect_to('/index.html') });
+  $r->get('/')->to(cb => sub { shift->render_static('index.html') });
   $r->get('/nytfeedfun/feeds/:id')->to('NYTFeedFun#feeds');
 }
 
