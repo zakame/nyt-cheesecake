@@ -6,7 +6,7 @@ use XML::RSS::LibXML;
 
 my $nytfeeds = 'http://static.opml.org/misc/nytFeeds.opml';
 
-sub get_feeds {
+sub parse_feeds {
     my $opml   = shift;
     my $parser = XML::OPML::LibXML->new;
     my $doc    = $parser->parse_string($opml);
@@ -32,7 +32,7 @@ sub feeds {
     my $self  = shift;
     my $ua    = $self->ua->max_redirects(3);
     my $opml  = $ua->get($nytfeeds)->res->body;
-    my @feeds = get_feeds($opml);
+    my @feeds = parse_feeds($opml);
 
     return $self->respond_to( any => { json => \@feeds } )
         if $self->param('id') eq 'index';
