@@ -7,9 +7,10 @@ angular.module('NYTFeedFun.services', ['ngResource'])
     return search;
   }])
 
-  .factory('Feeds', ['$resource', function($resource) {
+  .factory('Feeds', ['$resource', '$cacheFactory',
+  function($resource, $cacheFactory) {
     return $resource('nytfeedfun/feeds/:feedId.json', {}, {
-      get: {cache:true},
+      get: {cache:$cacheFactory('feeds-cache', {capacity:3})},
       query: {method:'GET', params:{feedId:'index'}, isArray:true, cache:true}
     });
   }]);
