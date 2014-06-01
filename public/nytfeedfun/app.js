@@ -3,6 +3,7 @@
 angular.module('NYTFeedFun', [
   'ngRoute',
   'angular-loading-bar',
+  'ui.bootstrap',
   'NYTFeedFun.services',
   'NYTFeedFun.controllers'
 ]).

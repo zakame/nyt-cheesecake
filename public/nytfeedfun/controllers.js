@@ -3,6 +3,7 @@
 angular.module('NYTFeedFun.controllers', ['ngSanitize'])
   .controller('Search', ['$scope', 'Search', function($scope, Search) {
     $scope.search = Search;
+    $scope.navCollapsed = true;
   }])
 
   .controller('Feeds', ['$scope', 'Feeds', 'Search',
