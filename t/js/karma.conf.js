@@ -1,7 +1,7 @@
 module.exports = function(config){
   config.set({
 
-    basePath : '../',
+    basePath : '../../',
 
     files : [
       'public/bower_components/angular/angular.js',
@@ -12,7 +12,7 @@ module.exports = function(config){
       'public/bower_components/angular-loading-bar/build/loading-bar.js',
       'public/bower_components/angular-bootstrap/ui-bootstrap.js',
       'public/nytfeedfun/**/*.js',
-      'test/unit/**/*.js'
+      't/js/unit/**/*.js'
     ],
 
     autoWatch : true,
