@@ -24,7 +24,7 @@ sub get_feeds_index {
             };
     }
 
-    +{ feed => \@feeds };
+    wantarray ? @feeds : \@feeds;
 }
 
 sub get_feed_items {

@@ -15,11 +15,11 @@ has nytfeeds => sub {
 };
 
 my $feeds_url = 'http://static.opml.org/misc/nytFeeds.opml';
-my $feeds;
+my $feeds     = [];
 
 sub feeds {
     my $self = shift;
-    return 1 if ref $feeds eq 'HASH' && $feeds->{feed};
+    return 1 if @$feeds;
 
     $feeds = $self->nytfeeds->get_feeds_index($feeds_url);
 }
@@ -34,7 +34,7 @@ sub feed_items {
     my $id   = $self->param('id');
 
     my $feed;
-    grep { $feed = $_ if $_->{id} eq $id } @{ $feeds->{feed} };
+    grep { $feed = $_ if $_->{id} eq $id } @$feeds;
     return $self->render('does_not_exist') unless $feed;
 
     $self->respond_to(
