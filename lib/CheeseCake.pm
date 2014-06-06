@@ -14,7 +14,7 @@ sub startup {
   # NYTFeedFun
   $r->get('/')->to(cb => sub { shift->render_static('index.html') });
   my $feeds = $r->bridge('/nytfeedfun/feeds')->to('NYTFeedFun#feeds');
-  $feeds->get('/index')->to('NYTFeedFun#feeds_index');
+  $feeds->get('/list')->to('NYTFeedFun#feeds_list');
   $feeds->get('/:id')->to('NYTFeedFun#feed_items');
 }
 

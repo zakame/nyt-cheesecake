@@ -5,7 +5,7 @@ has 'ua';
 has 'opml_parser';
 has 'rss_parser';
 
-sub get_feeds_index {
+sub get_feeds_list {
     my ( $self, $feeds_url ) = @_;
     my $opml = $self->ua->get($feeds_url)->res->body;
     my $doc  = $self->opml_parser->parse_string($opml);

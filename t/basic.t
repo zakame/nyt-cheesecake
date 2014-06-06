@@ -20,7 +20,7 @@ subtest 'static content' => sub {
 };
 
 subtest 'feeds' => sub {
-  $t->get_ok('/nytfeedfun/feeds/index.json')
+  $t->get_ok('/nytfeedfun/feeds/list.json')
     ->status_is(200);
   $t->get_ok('/nytfeedfun/feeds/1.json')
     ->status_is(200)

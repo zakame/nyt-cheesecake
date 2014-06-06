@@ -21,10 +21,10 @@ sub feeds {
     my $self = shift;
     return 1 if @$feeds;
 
-    $feeds = $self->nytfeeds->get_feeds_index($feeds_url);
+    $feeds = $self->nytfeeds->get_feeds_list($feeds_url);
 }
 
-sub feeds_index {
+sub feeds_list {
     my $self = shift;
     $self->respond_to( any => { json => $feeds } );
 }
