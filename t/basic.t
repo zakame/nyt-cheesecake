@@ -21,7 +21,13 @@ subtest 'static content' => sub {
 
 subtest 'feeds' => sub {
   $t->get_ok('/nytfeedfun/feeds/list.json')
-    ->status_is(200);
+    ->status_is(200)
+    ->json_has('/1')
+    ->json_has('/1/id')
+    ->json_has('/1/title')
+    ->json_has('/1/type')
+    ->json_has('/1/xmlUrl')
+    ->json_has('/1/htmlUrl');
   $t->get_ok('/nytfeedfun/feeds/1.json')
     ->status_is(200)
     ->json_has('/title')
