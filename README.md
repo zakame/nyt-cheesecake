@@ -33,7 +33,8 @@ using the JavaScript libs via Google.
 
 - ~~A better look and feel lol: thinking about Plurk-style timeline...~~
   Somewhat done, it looks more of a mobile-friendly feed reader now.
-- Add Karma and Protractor tests
+- ~~Add Karma and Protractor tests~~
+  Basic JS tests added, though I think I still need more...
 
 ## LICENSE
 
