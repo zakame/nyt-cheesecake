@@ -25,6 +25,6 @@
     "update-webdriver": "webdriver-manager update",
 
     "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor test/protractor-conf.js"
+    "protractor": "protractor t/js/protractor-conf.js"
   }
 }
