@@ -8,7 +8,7 @@ angular.module('NYTFeedFun.controllers', ['ngSanitize'])
 
   .controller('Feeds', ['$scope', 'Feeds', 'Search',
   function($scope, Feeds, Search) {
-    $scope.feeds  = Feeds.query();
+    $scope.feeds  = Feeds.list();
     $scope.search = Search;
     $scope.search.reset();
   }])
