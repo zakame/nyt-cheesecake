@@ -1,3 +1,5 @@
+/*global describe browser it expect beforeEach element by */
+
 'use strict';
 
 /* https://github.com/angular/protractor/blob/master/docs/getting-started.md */

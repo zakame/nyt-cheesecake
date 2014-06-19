@@ -1,3 +1,5 @@
+/*global exports */
+
 exports.config = {
   allScriptsTimeout: 11000,
 

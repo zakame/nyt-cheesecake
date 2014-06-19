@@ -1,3 +1,5 @@
+/*global describe beforeEach module it inject expect */
+
 'use strict';
 
 /* jasmine specs for services go here */

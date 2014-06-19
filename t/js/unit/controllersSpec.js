@@ -1,3 +1,5 @@
+/*global describe beforeEach module angular inject it expect */
+
 'use strict';
 
 /* jasmine specs for controllers go here */
