@@ -1,4 +1,4 @@
-/*global describe browser it expect beforeEach element by */
+/*global describe,browser,it,expect,beforeEach,element,by */
 
 'use strict';
 

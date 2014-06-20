@@ -1,4 +1,4 @@
-/*global describe beforeEach module it inject expect */
+/*global describe,beforeEach,module,it,inject,expect */
 
 'use strict';
 

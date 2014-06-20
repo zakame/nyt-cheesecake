@@ -5,7 +5,7 @@
 angular.module('NYTFeedFun.services', ['ngResource'])
   .factory('Search', [function() {
     var search = {terms:''};
-    search.reset = function() { search.terms = '' };
+    search.reset = function() { search.terms = ''; };
     return search;
   }])
 
