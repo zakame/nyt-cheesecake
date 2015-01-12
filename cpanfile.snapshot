@@ -1093,6 +1093,14 @@ DISTRIBUTIONS
       File::Spec 0.8
       Pod::Man 0
       perl 5.006
+  IO-Socket-IP-0.36
+    pathname: P/PE/PEVANS/IO-Socket-IP-0.36.tar.gz
+    provides:
+      IO::Socket::IP 0.36
+    requirements:
+      IO::Socket 0
+      Socket 1.97
+      Test::More 0.88
   List-MoreUtils-0.33
     pathname: A/AD/ADAMK/List-MoreUtils-0.33.tar.gz
     provides:
@@ -1148,8 +1156,8 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  Mojolicious-4.99
-    pathname: S/SR/SRI/Mojolicious-4.99.tar.gz
+  Mojolicious-5.72
+    pathname: S/SR/SRI/Mojolicious-5.72.tar.gz
     provides:
       Mojo undef
       Mojo::Asset undef
@@ -1212,7 +1220,7 @@ DISTRIBUTIONS
       Mojo::UserAgent::Server undef
       Mojo::UserAgent::Transactor undef
       Mojo::Util undef
-      Mojolicious 4.99
+      Mojolicious 5.72
       Mojolicious::Command undef
       Mojolicious::Command::cgi undef
       Mojolicious::Command::cpanify undef
@@ -1260,7 +1268,9 @@ DISTRIBUTIONS
       ojo undef
     requirements:
       ExtUtils::MakeMaker 0
-      perl 5.010001
+      IO::Socket::IP 0.26
+      Pod::Simple 3.09
+      Time::Local 1.2
   Package-Stash-0.36
     pathname: D/DO/DOY/Package-Stash-0.36.tar.gz
     provides:
@@ -1331,6 +1341,15 @@ DISTRIBUTIONS
       strict 0
       vars 0
       warnings 0
+  Socket-2.016
+    pathname: P/PE/PEVANS/Socket-2.016.tar.gz
+    provides:
+      Socket 2.016
+    requirements:
+      ExtUtils::CBuilder 0
+      ExtUtils::Constant 0.23
+      ExtUtils::MakeMaker 0
+      perl 5.006001
   Sub-Install-0.927
     pathname: R/RJ/RJBS/Sub-Install-0.927.tar.gz
     provides:

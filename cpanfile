@@ -1,4 +1,4 @@
-requires 'Mojolicious', '4.99';
+requires 'Mojolicious', '5.72';
 requires 'XML::OPML::LibXML', '0.03';
 requires 'XML::RSS::LibXML', '0.3105';
 
