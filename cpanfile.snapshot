@@ -56,7 +56,6 @@ DISTRIBUTIONS
       DateTime::Infinite::Future 1.10
       DateTime::Infinite::Past 1.10
       DateTime::LeapSecond 1.10
-      inc::MyModuleBuild undef
     requirements:
       Carp 0
       DateTime::Locale 0.41
@@ -1058,7 +1057,6 @@ DISTRIBUTIONS
   ExtUtils-MakeMaker-6.98
     pathname: B/BI/BINGOS/ExtUtils-MakeMaker-6.98.tar.gz
     provides:
-      DynaLoader 6.98
       ExtUtils::Command::MM 6.98
       ExtUtils::Liblist 6.98
       ExtUtils::Liblist::Kid 6.98
@@ -1088,7 +1086,6 @@ DISTRIBUTIONS
       ExtUtils::testlib 6.98
       MM 6.98
       MY 6.98
-      in 6.98
     requirements:
       Data::Dumper 0
       DirHandle 0
@@ -1134,10 +1131,6 @@ DISTRIBUTIONS
     pathname: D/DR/DROLSKY/Module-Implementation-0.07.tar.gz
     provides:
       Module::Implementation 0.07
-      T::Impl1 undef
-      T::Impl2 undef
-      T::ImplFails1 undef
-      T::ImplFails2 undef
     requirements:
       Carp 0
       ExtUtils::MakeMaker 6.30
@@ -1229,7 +1222,7 @@ DISTRIBUTIONS
       Mojolicious::Command::generate::app undef
       Mojolicious::Command::generate::lite_app undef
       Mojolicious::Command::generate::makefile undef
-      Mojolicious::Command::generate::plugin 0.01
+      Mojolicious::Command::generate::plugin undef
       Mojolicious::Command::get undef
       Mojolicious::Command::inflate undef
       Mojolicious::Command::prefork undef
@@ -1299,7 +1292,6 @@ DISTRIBUTIONS
   Package-Stash-XS-0.28
     pathname: D/DO/DOY/Package-Stash-XS-0.28.tar.gz
     provides:
-      CompileTime undef
       Package::Stash::XS 0.28
     requirements:
       ExtUtils::MakeMaker 6.30
@@ -1321,23 +1313,10 @@ DISTRIBUTIONS
     pathname: D/DR/DROLSKY/Params-Validate-1.10.tar.gz
     provides:
       Attribute::Params::Validate 1.10
-      Bar undef
-      Baz undef
-      Foo undef
-      PVTests undef
-      PVTests::Callbacks undef
-      PVTests::Defaults undef
-      PVTests::Regex undef
-      PVTests::Standard undef
-      PVTests::With undef
       Params::Validate 1.10
       Params::Validate::Constants 1.10
       Params::Validate::PP 1.10
       Params::Validate::XS 1.10
-      Quux undef
-      Testing::X undef
-      Yadda undef
-      inc::MyModuleBuild undef
     requirements:
       Attribute::Handlers 0.79
       Carp 0
@@ -1382,6 +1361,7 @@ DISTRIBUTIONS
       App::Prove::State 3.30
       App::Prove::State::Result 3.30
       App::Prove::State::Result::Test 3.30
+      Harness::Hook undef
       TAP::Base 3.30
       TAP::Formatter::Base 3.30
       TAP::Formatter::Color 3.30
@@ -1454,7 +1434,6 @@ DISTRIBUTIONS
   UNIVERSAL-require-0.17
     pathname: N/NE/NEILB/UNIVERSAL-require-0.17.tar.gz
     provides:
-      UNIVERSAL 0.17
       UNIVERSAL::require 0.17
     requirements:
       Carp 0
