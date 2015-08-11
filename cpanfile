@@ -2,6 +2,7 @@ requires 'perl', '5.22.0';
 requires 'Mojolicious', '6.0';
 requires 'XML::OPML::LibXML', '0.03';
 requires 'XML::RSS::LibXML', '0.3105';
+requires 'Furl', '3.08';
 requires 'HTTP::Exception', '0.04006';
 requires 'Moo', '2.000002';
 requires 'Plack', '1.0037';
