@@ -1,9 +1,7 @@
 package NYTFeeds;
-use Mojo::Base -base;
+use Moo;
 
-has 'ua';
-has 'opml_parser';
-has 'rss_parser';
+has [qw(ua opml_parser rss_parser)] => ( is => 'ro', required => 1 );
 
 sub get_feeds_list {
     my ( $self, $feeds_url ) = @_;
