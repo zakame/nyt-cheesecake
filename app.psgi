@@ -12,13 +12,13 @@ use NYTFeedFun::Feeds::List;
 use NYTFeedFun::Feeds::Feed;
 
 # services
-use Mojo::UserAgent;
+use Furl::HTTP;
 use XML::OPML::LibXML;
 use XML::RSS::LibXML;
 use NYTFeeds;
 
 my $svc = NYTFeeds->new(
-    ua          => Mojo::UserAgent->new->max_redirects(3),
+    ua          => Furl::HTTP->new,
     opml_parser => XML::OPML::LibXML->new,
     rss_parser  => XML::RSS::LibXML->new,
 );

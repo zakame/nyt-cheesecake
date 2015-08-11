@@ -5,7 +5,7 @@ has [qw(ua opml_parser rss_parser)] => ( is => 'ro', required => 1 );
 
 sub get_feeds_list {
     my ( $self, $feeds_url ) = @_;
-    my $opml = $self->ua->get($feeds_url)->res->body;
+    my $opml = ($self->ua->get($feeds_url))[4];
     my $doc  = $self->opml_parser->parse_string($opml);
     my ( @feeds, $id );
 
@@ -27,7 +27,7 @@ sub get_feeds_list {
 
 sub get_feed_items {
     my ( $self, $feed_url ) = @_;
-    my $xml = $self->ua->get($feed_url)->res->body;
+    my $xml = ($self->ua->get($feed_url))[4];
     my $rss = $self->rss_parser->parse($xml);
 
     my $feed = {
