@@ -3,6 +3,7 @@ requires 'Mojolicious', '6.0';
 requires 'XML::OPML::LibXML', '0.03';
 requires 'XML::RSS::LibXML', '0.3105';
 requires 'HTTP::Exception', '0.04006';
+requires 'Moo', '2.000002';
 requires 'Plack', '1.0037';
 requires 'Plack::Middleware::Negotiate', '0.20';
 requires 'Plack::Middleware::ReverseProxy', '0.15';
