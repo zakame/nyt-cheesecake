@@ -7,6 +7,22 @@ use File::Spec;
 use File::Basename 'dirname';
 use lib File::Spec->catdir( dirname(__FILE__), 'lib' );
 
+# controllers (Plack apps)
+use NYTFeedFun::Feeds::List;
+use NYTFeedFun::Feeds::Feed;
+
+# services
+use Mojo::UserAgent;
+use XML::OPML::LibXML;
+use XML::RSS::LibXML;
+use NYTFeeds;
+
+my $svc = NYTFeeds->new(
+    ua          => Mojo::UserAgent->new->max_redirects(3),
+    opml_parser => XML::OPML::LibXML->new,
+    rss_parser  => XML::RSS::LibXML->new,
+);
+
 builder {
     enable_if { $_[0]->{REMOTE_ADDR} eq '127.0.0.1' } 'ReverseProxy';
 
@@ -25,11 +41,16 @@ builder {
         };
     };
 
-    # Plack app for the feeds API
-    mount '/nytfeedfun/feeds' => sub {
-        my $env = shift;
+    # Plack apps for the feeds API
+    mount '/nytfeedfun/feeds' => builder {
+        enable 'HTTPExceptions';
+        enable 'Negotiate',
+            formats =>
+            { json => { type => 'application/json', charset => 'utf-8' } },
+            extension => 'strip';
 
-        [ 200, [], ["feed $env->{PATH_INFO} goes here."] ];
+        mount '/list' => NYTFeedFun::Feeds::List->new( svc => $svc )->to_app;
+        mount '/'     => NYTFeedFun::Feeds::Feed->new( svc => $svc )->to_app;
     };
 
     # static index page, with DirIndex middleware inlined
