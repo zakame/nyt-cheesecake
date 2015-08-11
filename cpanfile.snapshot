@@ -28,6 +28,12 @@ DISTRIBUTIONS
       Class::Accessor::Lite 0.08
     requirements:
       ExtUtils::MakeMaker 6.36
+  Class-Data-Inheritable-0.08
+    pathname: T/TM/TMTM/Class-Data-Inheritable-0.08.tar.gz
+    provides:
+      Class::Data::Inheritable 0.08
+    requirements:
+      ExtUtils::MakeMaker 0
   Class-Inspector-1.28
     pathname: A/AD/ADAMK/Class-Inspector-1.28.tar.gz
     provides:
@@ -1046,6 +1052,21 @@ DISTRIBUTIONS
       Encode::Alias 0
       ExtUtils::MakeMaker 0
       perl 5.008
+  Exception-Class-1.39
+    pathname: D/DR/DROLSKY/Exception-Class-1.39.tar.gz
+    provides:
+      Exception::Class 1.39
+      Exception::Class::Base 1.39
+    requirements:
+      Class::Data::Inheritable 0.02
+      Devel::StackTrace 2.00
+      ExtUtils::MakeMaker 0
+      Scalar::Util 0
+      base 0
+      overload 0
+      perl 5.008001
+      strict 0
+      warnings 0
   Exporter-Declare-0.114
     pathname: E/EX/EXODIST/Exporter-Declare-0.114.tar.gz
     provides:
@@ -1233,6 +1254,28 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Time::Local 0
       perl 5.006002
+  HTTP-Exception-0.04006
+    pathname: T/TM/TMUELLER/HTTP-Exception-0.04006.tar.gz
+    provides:
+      HTTP::Exception 0.04006
+      HTTP::Exception::1XX 0.04006
+      HTTP::Exception::2XX 0.04006
+      HTTP::Exception::3XX 0.04006
+      HTTP::Exception::4XX 0.04006
+      HTTP::Exception::5XX 0.04006
+      HTTP::Exception::Base 0.04006
+      HTTP::Exception::Loader 0.04006
+    requirements:
+      Exception::Class 1.29
+      ExtUtils::MakeMaker 6.30
+      HTTP::Status 5.817
+      Scalar::Util 1.22
+      Test::Exception 0.29
+      Test::More 0.88
+      Test::NoWarnings 1.04
+      base 0
+      strict 0
+      warnings 0
   HTTP-Headers-Fast-0.18
     pathname: T/TO/TOKUHIROM/HTTP-Headers-Fast-0.18.tar.gz
     provides:
@@ -1909,6 +1952,17 @@ DISTRIBUTIONS
       perl 5.006001
       strict 0
       warnings 0
+  Test-NoWarnings-1.04
+    pathname: A/AD/ADAMK/Test-NoWarnings-1.04.tar.gz
+    provides:
+      Test::NoWarnings 1.04
+      Test::NoWarnings::Warning 1.04
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::Builder 0.86
+      Test::More 0.47
+      Test::Tester 0.107
+      perl 5.006
   Test-Requires-0.10
     pathname: T/TO/TOKUHIROM/Test-Requires-0.10.tar.gz
     provides:
