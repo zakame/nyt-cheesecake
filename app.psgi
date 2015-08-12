@@ -13,8 +13,8 @@ use NYTFeedFun::Feeds::Feed;
 
 # services
 use NYTFeeds;
-
-my $svc = NYTFeeds->new;
+my $svc
+    = NYTFeeds->new( opml => 'http://static.opml.org/misc/nytFeeds.opml' );
 
 builder {
     enable_if { $_[0]->{REMOTE_ADDR} eq '127.0.0.1' } 'ReverseProxy';

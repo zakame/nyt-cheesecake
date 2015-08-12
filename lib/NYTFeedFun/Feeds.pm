@@ -18,8 +18,7 @@ has feeds => ( is => 'rwp' );
 sub prepare_app {
     my $self = shift;
 
-    my $feeds = $self->svc->get_feeds_list(
-        'http://static.opml.org/misc/nytFeeds.opml');
+    my $feeds = $self->svc->get_feeds_list;
     $self->_set_feeds($feeds);
 }
 

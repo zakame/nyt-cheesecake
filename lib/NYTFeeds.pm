@@ -4,13 +4,15 @@ use Furl::HTTP;
 use XML::OPML::LibXML;
 use XML::RSS::LibXML;
 
+has opml => ( is => 'ro', required => 1 );
+
 has ua          => ( is => 'ro', default => sub { Furl::HTTP->new } );
 has opml_parser => ( is => 'ro', default => sub { XML::OPML::LibXML->new } );
 has rss_parser  => ( is => 'ro', default => sub { XML::RSS::LibXML->new } );
 
 sub get_feeds_list {
-    my ( $self, $feeds_url ) = @_;
-    my $opml = ( $self->ua->get($feeds_url) )[4];
+    my $self = shift;
+    my $opml = ( $self->ua->get( $self->opml ) )[4];
     my $doc  = $self->opml_parser->parse_string($opml);
     my ( @feeds, $id );
 
