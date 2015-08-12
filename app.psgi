@@ -12,16 +12,9 @@ use NYTFeedFun::Feeds::List;
 use NYTFeedFun::Feeds::Feed;
 
 # services
-use Furl::HTTP;
-use XML::OPML::LibXML;
-use XML::RSS::LibXML;
 use NYTFeeds;
 
-my $svc = NYTFeeds->new(
-    ua          => Furl::HTTP->new,
-    opml_parser => XML::OPML::LibXML->new,
-    rss_parser  => XML::RSS::LibXML->new,
-);
+my $svc = NYTFeeds->new;
 
 builder {
     enable_if { $_[0]->{REMOTE_ADDR} eq '127.0.0.1' } 'ReverseProxy';
