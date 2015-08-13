@@ -62,6 +62,13 @@ DISTRIBUTIONS
       Class::Singleton 1.4
     requirements:
       ExtUtils::MakeMaker 0
+  Clone-0.38
+    pathname: G/GA/GARU/Clone-0.38.tar.gz
+    provides:
+      Clone 0.38
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   Cookie-Baker-0.06
     pathname: K/KA/KAZEBURO/Cookie-Baker-0.06.tar.gz
     provides:
@@ -1376,6 +1383,35 @@ DISTRIBUTIONS
       IPC::Signal 1.00
     requirements:
       ExtUtils::MakeMaker 0
+  JSON-2.90
+    pathname: M/MA/MAKAMAKA/JSON-2.90.tar.gz
+    provides:
+      JSON 2.90
+      JSON::Backend::PP 2.90
+      JSON::Boolean 2.90
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+  JSON-Pointer-0.06
+    pathname: Z/ZI/ZIGOROU/JSON-Pointer-0.06.tar.gz
+    provides:
+      JSON::Pointer 0.06
+      JSON::Pointer::Context 0.06
+      JSON::Pointer::Exception 0.06
+      JSON::Pointer::Syntax 0.06
+    requirements:
+      B 0
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Carp 1.20
+      Class::Accessor::Lite 0.05
+      Clone 0.36
+      Exporter 0
+      ExtUtils::CBuilder 0
+      JSON 2.53
+      Module::Build 0.38
+      URI::Escape 3.31
+      perl 5.008001
   LWP-MediaTypes-6.02
     pathname: G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz
     provides:

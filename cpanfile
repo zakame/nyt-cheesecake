@@ -4,6 +4,8 @@ requires 'XML::OPML::LibXML', '0.03';
 requires 'XML::RSS::LibXML', '0.3105';
 requires 'Furl', '3.08';
 requires 'HTTP::Exception', '0.04006';
+requires 'JSON', '2.90';
+requires 'JSON::Pointer', '0.06';
 requires 'Moo', '2.000002';
 requires 'Plack', '1.0037';
 requires 'Plack::Middleware::Negotiate', '0.20';
