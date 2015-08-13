@@ -1,5 +1,4 @@
 requires 'perl', '5.22.0';
-requires 'Mojolicious', '6.0';
 requires 'XML::OPML::LibXML', '0.03';
 requires 'XML::RSS::LibXML', '0.3105';
 requires 'Furl', '3.08';
