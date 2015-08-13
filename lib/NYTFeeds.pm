@@ -44,6 +44,7 @@ sub get_feed_items {
     };
     for my $item ( $rss->items ) {
         $item->{description} =~ s/<img width='1' height='1'.*$//;
+        $item->{description} =~ s#<br clear='all'.*$##;
         push @{ $feed->{items} }, $item;
     }
 
