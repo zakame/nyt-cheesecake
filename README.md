@@ -4,13 +4,13 @@ Just a weekend hack for #nytfeedfun, see [Dave Winer's challenge][0].
 
 [0]: http://scripting.com/2014/05/16/?#a1400253877
 
-Built with [Mojolicious][1], [AngularJS][2], and some boredom.  In fact,
+Built with [PSGI/Plack][1], [AngularJS][2], and some boredom.  In fact,
 it is mainly a way for me to learn more about AngularJS and other frontend
 stuff, while retaining a solid backend in Perl :smiling_imp:
 
 And, why _CheeseCake_?  Dave's post had an image of it, so there...
 
-[1]: http://mojolicio.us
+[1]: http://plackperl.org
 [2]: http://angularjs.org
 
 ## RUNNING
@@ -19,7 +19,7 @@ As long as you have a recent Perl (5.14 and up,) with [Carton][3], and
 [libxml2][4], just do
 
     $ carton install --deployment
-    $ carton exec morbo script/cheese_cake
+    $ carton exec plackup
 
 And visit http://localhost:3000 .
 
