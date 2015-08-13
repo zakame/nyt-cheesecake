@@ -19,9 +19,6 @@ my $svc
 builder {
     enable_if { $_[0]->{REMOTE_ADDR} eq '127.0.0.1' } 'ReverseProxy';
 
-    # the original Mojolicious app
-    # require './script/cheese_cake';
-
     # Angular app and other static files
     mount '/nytfeedfun' => builder {
         enable 'Static',
