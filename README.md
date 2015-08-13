@@ -21,7 +21,7 @@ As long as you have a recent Perl (5.14 and up,) with [Carton][3], and
     $ carton install --deployment
     $ carton exec plackup
 
-And visit http://localhost:3000 .
+And visit http://localhost:5000 .
 
 Internet connection required for pulling the OPML/RSS as well as
 using the JavaScript libs via Google.
@@ -38,7 +38,7 @@ using the JavaScript libs via Google.
 
 ## LICENSE
 
-Copyright (c) 2014 Zak B. Elep
+Copyright (c) 2014-2015 Zak B. Elep
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
