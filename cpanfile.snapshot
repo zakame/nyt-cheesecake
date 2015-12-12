@@ -1468,6 +1468,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Moo 1.003
       Scalar::Util 0
+  MRO-Compat-0.12
+    pathname: B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz
+    provides:
+      MRO::Compat 0.12
+    requirements:
+      ExtUtils::MakeMaker 6.59
+      Test::More 0.47
+      perl 5.006
   Meta-Builder-0.003
     pathname: E/EX/EXODIST/Meta-Builder-0.003.tar.gz
     provides:
@@ -1776,6 +1784,30 @@ DISTRIBUTIONS
       URI 1.59
       parent 0
       perl 5.008001
+  Plack-Middleware-JSON-ForBrowsers-0.002000
+    pathname: M/MS/MSTOCK/Plack-Middleware-JSON-ForBrowsers-0.002000.tar.gz
+    provides:
+      Plack::Middleware::JSON::ForBrowsers 0.002000
+    requirements:
+      Carp 0
+      Encode 0
+      File::Find 0
+      File::Temp 0
+      HTML::Entities 0
+      HTTP::Request::Common 0
+      JSON 0
+      List::MoreUtils 0
+      MRO::Compat 0
+      Module::Build 0.3601
+      Plack::Middleware 0
+      Plack::Test 0
+      Plack::Util 0
+      Plack::Util::Accessor 0
+      Test::Class 0
+      Test::More 0
+      parent 0
+      strict 0
+      warnings 0
   Plack-Middleware-Negotiate-0.20
     pathname: V/VO/VOJ/Plack-Middleware-Negotiate-0.20.tar.gz
     provides:
@@ -1891,6 +1923,29 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.17
       constant 0
       perl 5.006
+      strict 0
+      warnings 0
+  Test-Class-0.50
+    pathname: E/ET/ETHER/Test-Class-0.50.tar.gz
+    provides:
+      Test::Class 0.50
+      Test::Class::Load 0.50
+      Test::Class::MethodInfo 0.50
+    requirements:
+      Attribute::Handlers 0.77
+      Carp 0
+      ExtUtils::MakeMaker 0
+      File::Find 0
+      File::Spec 0
+      MRO::Compat 0.11
+      Module::Runtime 0
+      Storable 2.04
+      Test::Builder 0.78
+      Test::Builder::Tester 1.02
+      Test::Simple 0.78
+      Try::Tiny 0
+      constant 0
+      perl 5.008001
       strict 0
       warnings 0
   Test-Exception-0.40

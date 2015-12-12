@@ -33,6 +33,9 @@ builder {
 
     # Plack apps for the feeds API
     mount '/nytfeedfun/feeds' => builder {
+        enable_if { $ENV{PLACK_ENV} eq 'development' } 'JSON::ForBrowsers';
+        enable_if { $ENV{PLACK_ENV} eq 'development' } 'Debug';
+
         enable 'HTTPExceptions';
         enable 'Negotiate',
             formats =>

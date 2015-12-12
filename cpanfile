@@ -7,6 +7,7 @@ requires 'JSON', '2.90';
 requires 'JSON::Pointer', '0.06';
 requires 'Moo', '2.000002';
 requires 'Plack', '1.0037';
+requires 'Plack::Middleware::JSON::ForBrowsers', '0.002000';
 requires 'Plack::Middleware::Negotiate', '0.20';
 requires 'Plack::Middleware::ReverseProxy', '0.15';
 requires 'Router::Boom', '1.02';
