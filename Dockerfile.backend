@@ -1,0 +1,13 @@
+FROM tianon/mojo
+
+RUN apt-get update && apt-get -y install libxml2-dev && rm -fr /var/lib/apt/lists/*
+
+COPY . /code
+WORKDIR /code
+
+RUN cpanm Carton
+RUN carton install --deployment
+
+EXPOSE 3000
+
+ENTRYPOINT ["/usr/local/bin/carton", "exec", "morbo", "script/cheese_cake"]

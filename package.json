@@ -6,25 +6,39 @@
   "repository": "https://github.com/zakame/nyt-cheesecake",
   "license": "MIT",
   "devDependencies": {
-    "karma": "~0.10",
-    "protractor": "~0.20.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-class-properties": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "bootstrap-loader": "^1.2.1",
+    "bootstrap-sass": "^3.3.7",
     "bower": "^1.3.1",
-    "shelljs": "^0.2.6",
-    "karma-junit-reporter": "^0.2.2"
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.10.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "postinstall": "bower install",
-
-    "prestart": "npm install",
-
-    "pretest": "npm install",
-    "test": "karma start t/js/karma.conf.js",
-    "test-single-run": "karma start t/js/karma.conf.js  --single-run",
-
-    "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update",
-
-    "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor t/js/protractor-conf.js"
+    "build": "webpack -p",
+    "start": "webpack-dev-server -d --hot --inline"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "nprogress": "^0.2.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   }
 }

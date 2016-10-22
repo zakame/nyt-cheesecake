@@ -1,66 +1,13 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="NYTFeedFun" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="NYTFeedFun" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="NYTFeedFun" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="NYTFeedFun" class="no-js"> <!--<![endif]-->
+<!doctype html> <!-- -*- mode: web -*- -->
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
     <title>NYT Feed Fun</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css">
-    <link rel="stylesheet" href="nytfeedfun/loading-bar.min.css">
-    <link rel="stylesheet" href="nytfeedfun/app.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
   </head>
   <body>
-    <nav class="nav navbar-default navbar-fixed-top" role="navigation">
-      <div ng-controller="Search" class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#/feeds" ng-click="search.terms=''">NYTFeedFun</a>
-        </div>
-        <div collapse="navCollapsed" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="https://github.com/zakame/nyt-cheesecake">Github</a></li>
-            <li><a href="https://twitter.com/zakame">@zakame</a></li>
-          </ul>
-          <form novalidate class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" ng-model="search.terms" class="form-control" placeholder="Search...">
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <div ng-cloak class="container">
-      <div ng-view></div>
-    </div>
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">
-          Made for learning by <a href="http://zakame.net">Zak B. Elep</a>.
-          Built with <a href="http://mojolicio.us">Mojolicious</a>
-          and <a href="https://angularjs.org">AngularJS</a>.
-          Code licensed under
-          <a href="https://github.com/zakame/nyt-cheesecake/blob/master/README.md">The MIT License</a>.
-        </p>
-      </div>
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-route.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-resource.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular-sanitize.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.min.js"></script>
-    <script src="nytfeedfun/loading-bar.min.js"></script>
-    <script src="nytfeedfun/app.js"></script>
-    <script src="nytfeedfun/services.js"></script>
-    <script src="nytfeedfun/controllers.js"></script>
+    <div id="root"></div>
+    <script src="/bundle.js"></script>
   </body>
 </html>

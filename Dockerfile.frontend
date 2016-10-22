@@ -1,0 +1,8 @@
+FROM node
+
+COPY . /code
+WORKDIR /code
+
+RUN npm install
+
+ENTRYPOINT ["/usr/local/bin/npm", "start"]

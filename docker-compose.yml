@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    volumes:
+      - .:/code
+    ports:
+      - "3000:3000"             # For testing or webpack -p
+    networks:
+      - cheesecake
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - .:/code
+    ports:
+      - "80:8080"
+      - "8080:8080"             # For webpack-dev-server HMR
+    networks:
+      - cheesecake
+
+networks:
+  cheesecake:

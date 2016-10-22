@@ -1,9 +1,0 @@
-<h1>New York Times RSS feeds</h1>
-
-<p>Select a feed from below:</p>
-
-<div class="list-group">
-  <a class="list-group-item" ng-repeat="feed in feeds | filter:search.terms" ng-href="#/feed/{{ feed.id }}">
-    <h2 class="list-group-item-heading">{{ feed.title }}</h2>
-  </a>
-</div>

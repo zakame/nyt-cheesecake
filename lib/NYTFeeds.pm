@@ -39,6 +39,7 @@ sub get_feed_items {
     };
     for my $item ( $rss->items ) {
         $item->{description} =~ s/<img width='1' height='1'.*$//;
+        $item->{media}->{content} =~ s/image\d+$// if $item->{media}->{content};
         push @{ $feed->{items} }, $item;
     }
 
