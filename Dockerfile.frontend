@@ -3,6 +3,6 @@ FROM node
 COPY . /code
 WORKDIR /code
 
-RUN npm install
+RUN npm install -g yarn && yarn
 
-ENTRYPOINT ["/usr/local/bin/npm", "start"]
+ENTRYPOINT ["/usr/local/bin/yarn", "start"]
