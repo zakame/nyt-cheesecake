@@ -7,6 +7,8 @@ module.exports = {
   devServer: {
     compress: true,
     contentBase: './public',
+    historyApiFallback:true,
+    hot: true,
     host: '0.0.0.0',
     port: '8080',
     proxy: {
@@ -16,7 +18,13 @@ module.exports = {
     },
     stats: 'errors-only'
   },
-  entry: ['bootstrap-loader','./public/js/index.js'],
+  devtool: 'eval',
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:8080',
+    'webpack/hot/only-dev-server',
+    'bootstrap-loader',
+    './public/js/index.js'
+  ],
   output: {
     path: __dirname + '/public',
     filename: 'bundle.js'
@@ -30,7 +38,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'react-hot-loader!babel-loader'
       },
       {
         test: /\.less$/,
@@ -50,6 +58,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
