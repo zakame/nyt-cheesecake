@@ -21,7 +21,6 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
     'webpack/hot/only-dev-server',
-    'bootstrap-loader',
     './public/js/index.js'
   ],
   output: {
@@ -51,7 +50,7 @@ module.exports = {
         loader: 'url-loader?limit=10000'
       },
       {
-        test: /bootstrap-sass\/assets\/javascripts\//,
+        test: /bootstrap\/js\//,
         loader: 'imports-loader?jQuery=jquery'
       }
     ]

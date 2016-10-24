@@ -1,6 +1,8 @@
 // -*- mode: js2-jsx -*-
 import React, { Component } from 'react';
 
+import 'bootstrap/js/collapse';
+
 class NavBar extends Component {
   handleClick = (e) => {
     e.preventDefault();
