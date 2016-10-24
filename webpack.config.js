@@ -30,11 +30,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          plugins: ['syntax-class-properties','transform-class-properties'],
-          presets: ['es2015','react']
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.less$/,

@@ -1,0 +1,4 @@
+{
+  plugins: ['syntax-class-properties','transform-class-properties'],
+  presets: ['es2015','react']
+}
