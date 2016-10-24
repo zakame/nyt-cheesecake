@@ -2,8 +2,21 @@
 import React, { Component } from 'react';
 import Feed from './Feed';
 
+const chunk = (array, size) => {
+  return array.reduce((chunks, item, i) => {
+    if (i % size === 0) {
+      chunks.push([item]);
+    }
+    else {
+      chunks[chunks.length-1].push(item);
+    }
+    return chunks;
+  }, []);
+}
+
 class FeedItems extends Component {
   render = () => {
+    const itemsPerRow = 3;
     const feedItemsNodes = this.props.items.map((item, idx) => {
       return (
         <Feed key={idx+1} item={item} />
@@ -14,7 +27,15 @@ class FeedItems extends Component {
         <a href={this.props.selected.htmlUrl}>
           <h1>{this.props.selected.title}</h1>
         </a>
-        {feedItemsNodes}
+        {chunk(feedItemsNodes, itemsPerRow).map((feedChunk) => (
+          <div className="row">
+            {feedChunk.map((feed) => (
+              <div className="col-md-4">
+                {feed}
+              </div>
+            ))}
+          </div>
+          ))}
       </div>
     );
   }
