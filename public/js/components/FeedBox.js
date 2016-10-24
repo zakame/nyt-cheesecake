@@ -55,7 +55,7 @@ class FeedBox extends Component {
   componentDidMount = () => {
     this.loadFeeds();
   }
-  render = () => {
+  render() {
     if (this.props.selected.id) {
       return (
         <div className="container">

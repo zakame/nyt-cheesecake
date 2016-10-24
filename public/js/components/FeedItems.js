@@ -15,7 +15,7 @@ const chunk = (array, size) => {
 }
 
 class FeedItems extends Component {
-  render = () => {
+  render() {
     const itemsPerRow = 3;
     const feedItemsNodes = this.props.items.map((item, idx) => {
       return (

@@ -6,7 +6,7 @@ class NavBar extends Component {
     e.preventDefault();
     this.props.selectFeed({});
   }
-  render = () => {
+  render() {
     return (
       <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
         <div className="container-fluid">

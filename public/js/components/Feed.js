@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 class Feed extends Component {
-  render = () => {
+  render() {
     const item = this.props.item;
     return (
       <div className="feed panel panel-default">
