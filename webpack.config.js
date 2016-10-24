@@ -45,15 +45,15 @@ module.exports = {
         loader: 'style-loader!css-loader!less-loader'
       },
       { test: /\.(ttf|eot)$/,
-        loader: 'file'
+        loader: 'file-loader'
       },
       {
         test: /\.(woff2?|svg)$/,
-        loader: 'url?limit=10000'
+        loader: 'url-loader?limit=10000'
       },
       {
         test: /bootstrap-sass\/assets\/javascripts\//,
-        loader: 'imports?jQuery=jquery'
+        loader: 'imports-loader?jQuery=jquery'
       }
     ]
   },
