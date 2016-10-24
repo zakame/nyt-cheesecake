@@ -8,7 +8,6 @@ module.exports = {
     compress: true,
     contentBase: './public',
     historyApiFallback:true,
-    hot: true,
     host: '0.0.0.0',
     port: '8080',
     proxy: {
@@ -58,7 +57,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
