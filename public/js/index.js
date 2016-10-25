@@ -1,6 +1,6 @@
 /* -*- mode: js2-jsx -*- */
 import '../css/bootswatch.less';
-import '../css/app.css';
+import '../css/index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
