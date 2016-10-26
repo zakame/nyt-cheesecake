@@ -10,6 +10,7 @@ class NavBar extends Component {
     this.props.selectFeed({});
   }
   render() {
+    const home = this.props.selected. id === undefined ? 'NYTFeedFun' : '< Back to Feeds';
     return (
       <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
         <div className="container-fluid">
@@ -21,7 +22,7 @@ class NavBar extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="" onClick={this.handleClick}>NYTFeedFun</a>
+            <a className="navbar-brand" href="" onClick={this.handleClick}>{home}</a>
           </div>
           <div id="navCollapsed" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
