@@ -15,6 +15,9 @@ const chunk = (array, size) => {
 }
 
 class FeedItems extends Component {
+  componentDidMount = () => {
+    document.body.scrollIntoView();
+  }
   render() {
     const itemsPerRow = 3;
     const feedItemsNodes = this.props.items.map((item, idx) => {

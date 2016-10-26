@@ -31,15 +31,14 @@ class FeedBox extends Component {
         }
       });
   }
-  loadFeedItems = (id) => {
-    this.setState({
-      items: []
-    })
+  loadFeedItems = (feed) => {
+    this.setState({items: []});
     NProgress.start();
-    axios.get('/nytfeedfun/feeds/' + id)
+    axios.get('/nytfeedfun/feeds/' + feed.id)
       .then(response => {
         NProgress.done();
         this.setState({items: response.data.items});
+        this.props.selectFeed(feed);
       })
       .catch(error => {
         NProgress.done();
@@ -52,25 +51,19 @@ class FeedBox extends Component {
         }
       });
   }
-  componentDidMount = () => {
-    this.loadFeeds();
-  }
   render() {
-    if (this.props.selected.id) {
-      return (
-        <div className="container">
-          <FeedItems selected={this.props.selected} items={this.state.items} />
-        </div>
-      )
-    }
-    else {
-      return (
-        <div className="container">
-          <FeedsList feeds={this.state.feeds} selectFeed={this.props.selectFeed}
-                     loadFeedItems={this.loadFeedItems} />
-        </div>
-      );
-    }
+    const feedsList = (
+      <FeedsList feeds={this.state.feeds} selectFeed={this.props.selectFeed}
+                 loadFeeds={this.loadFeeds} loadFeedItems={this.loadFeedItems} />
+    );
+    const feedItems = (
+      <FeedItems selected={this.props.selected} items={this.state.items} />
+    );
+    return (
+      <div className="container">
+        {this.props.selected.id === undefined ? feedsList : feedItems}
+      </div>
+    );
   }
 }
 

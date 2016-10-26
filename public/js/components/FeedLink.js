@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 class FeedLink extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    this.props.selectFeed(this.props.feed);
-    this.props.loadFeedItems(this.props.feed.id);
+    this.props.loadFeedItems(this.props.feed);
   }
   render() {
     return (

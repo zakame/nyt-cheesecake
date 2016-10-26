@@ -2,13 +2,16 @@
 import React, { Component } from 'react';
 import FeedLink from './FeedLink';
 
-class FeedsList extends React.Component {
+class FeedsList extends Component {
+  componentDidMount = () => {
+    this.props.loadFeeds();
+    document.body.scrollIntoView();
+  }
   render = () => {
     const feedsNodes = this.props.feeds.map(feed => {
       return (
         <FeedLink key={feed.id}
                   feed={feed}
-                  selectFeed={this.props.selectFeed}
                   loadFeedItems={this.props.loadFeedItems} />
       );
     });
