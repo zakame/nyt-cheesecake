@@ -42,7 +42,8 @@ module.exports = {
         test: /\.less$/,
         loader: 'style-loader!css-loader!less-loader'
       },
-      { test: /\.(ttf|eot)$/,
+      {
+        test: /\.(ttf|eot)$/,
         loader: 'file-loader'
       },
       {
