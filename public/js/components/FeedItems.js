@@ -1,4 +1,3 @@
-// -*- mode: js2-jsx -*-
 import React, { Component } from 'react';
 import Feed from './Feed';
 

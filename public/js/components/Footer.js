@@ -1,4 +1,3 @@
-// -*- mode: js2-jsx -*-
 import React, { Component } from 'react';
 
 class Footer extends Component {

@@ -1,4 +1,4 @@
-/* -*- mode: js2-jsx -*- */
+/* -*- mode: rjsx -*- */
 import '../css/bootswatch.less';
 import '../css/index.css';
 

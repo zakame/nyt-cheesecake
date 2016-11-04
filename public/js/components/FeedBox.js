@@ -1,4 +1,3 @@
-// -*- mode: js2-jsx -*-
 import 'nprogress/nprogress.css';
 
 import axios from 'axios';
