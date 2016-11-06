@@ -17,37 +17,28 @@ class FeedBox extends Component {
     axios.get('/nytfeedfun/feeds/list')
       .then(response => {
         NProgress.done();
-        this.setState({feeds: response.data});
+        this.setState({ feeds: response.data });
       })
       .catch(error => {
         NProgress.done();
-        if (error.response) {
-          console.error('Error getting feed list: ',
-                        error.response.status, error.response.data);
-        }
-        else {
-          console.error(error.message);
-        }
+        error.response ?
+          console.error('Error getting feed list: ', error.response.data) : console.error(error.message);
+
       });
   }
   loadFeedItems = (feed) => {
-    this.setState({items: []});
+    this.setState({ items: [] });
     NProgress.start();
     axios.get('/nytfeedfun/feeds/' + feed.id)
       .then(response => {
         NProgress.done();
-        this.setState({items: response.data.items});
+        this.setState({ items: response.data.items });
         this.props.selectFeed(feed);
       })
       .catch(error => {
         NProgress.done();
-        if (error.response) {
-          console.error('Error gettind feed: ',
-                        error.response.status, error.response.data);
-        }
-        else {
-          console.error(error.message);
-        }
+        error.response ?
+          console.error('Error gettind feed: ', error.response.data) : console.error(error.message);
       });
   }
   render() {

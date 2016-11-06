@@ -9,7 +9,7 @@ class App extends Component {
     selected: {}
   }
   selectFeed = (feed) => {
-    this.setState({selected: feed});
+    this.setState({ selected: feed });
   }
   render() {
     return (

@@ -7,7 +7,7 @@ module.exports = {
   devServer: {
     compress: true,
     contentBase: './public',
-    historyApiFallback:true,
+    historyApiFallback: true,
     host: '0.0.0.0',
     port: '8080',
     proxy: {
