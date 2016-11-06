@@ -1,12 +1,9 @@
 FROM tianon/mojo
 
-RUN apt-get update && apt-get -y install libxml2-dev && rm -fr /var/lib/apt/lists/*
-
 COPY . /code
 WORKDIR /code
 
-RUN cpanm Carton
-RUN carton install --deployment
+RUN cpanm App::cpm && cpm install -g Carton && cpm install
 
 EXPOSE 3000
 
