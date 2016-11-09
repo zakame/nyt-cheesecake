@@ -1,7 +1,6 @@
 package CheeseCake::NYTFeedFun;
 use Mojo::Base 'Mojolicious::Controller';
 
-use XML::OPML::LibXML;
 use XML::RSS::LibXML;
 
 use NYTFeeds;
@@ -9,7 +8,6 @@ use NYTFeeds;
 has nytfeeds => sub {
     NYTFeeds->new(
         ua          => shift->ua->max_redirects(3),
-        opml_parser => XML::OPML::LibXML->new,
         rss_parser  => XML::RSS::LibXML->new
     );
 };

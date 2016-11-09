@@ -727,6 +727,7 @@ DISTRIBUTIONS
       Mojolicious::Lite undef
       Mojolicious::Plugin undef
       Mojolicious::Plugin::Config undef
+      Mojolicious::Plugin::Config::Sandbox undef
       Mojolicious::Plugin::DefaultHelpers undef
       Mojolicious::Plugin::EPLRenderer undef
       Mojolicious::Plugin::EPRenderer undef
@@ -1025,16 +1026,6 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 6.42
       Test::More 0.47
-  XML-OPML-LibXML-0.03
-    pathname: M/MI/MIYAGAWA/XML-OPML-LibXML-0.03.tar.gz
-    provides:
-      XML::OPML::LibXML 0.03
-      XML::OPML::LibXML::Document undef
-      XML::OPML::LibXML::Outline undef
-    requirements:
-      ExtUtils::MakeMaker 0
-      Test::More 0
-      XML::LibXML 1.6
   XML-RSS-LibXML-0.3105
     pathname: D/DM/DMAKI/XML-RSS-LibXML-0.3105.tar.gz
     provides:
