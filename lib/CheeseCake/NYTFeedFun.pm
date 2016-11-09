@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 use NYTFeeds;
 
 has nytfeeds => sub {
-    NYTFeeds->new( ua => shift->ua->max_redirects(3), );
+    NYTFeeds->new( ua => shift->ua->max_redirects(3) );
 };
 
 my $feeds_url = 'http://static.opml.org/misc/nytFeeds.opml';
