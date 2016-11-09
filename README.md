@@ -15,8 +15,8 @@ And, why _CheeseCake_?  Dave's post had an image of it, so there...
 
 ## RUNNING
 
-As long as you have a recent Perl (5.14 and up,) with [Carton][3], 
-[libxml2][4], [Docker Compose][5], and [NodeJS][6], just do
+As long as you have a recent Perl (5.14 and up,)
+with [Carton][3], [Docker Compose][4], and [NodeJS][5], just do
 
     $ carton install --deployment
     $ npm install
@@ -25,9 +25,8 @@ As long as you have a recent Perl (5.14 and up,) with [Carton][3],
 And visit http://localhost .  Internet connection required.
 
 [3]: https://metacpan.org/pod/Carton
-[4]: http://xmlsoft.org/
-[5]: https://docs.docker.com/compose
-[6]: https://nodejs.org
+[4]: https://docs.docker.com/compose
+[5]: https://nodejs.org
 
 ## TODO
 

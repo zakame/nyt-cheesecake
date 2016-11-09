@@ -1,14 +1,11 @@
 package CheeseCake::NYTFeedFun;
 use Mojo::Base 'Mojolicious::Controller';
 
-use XML::RSS::LibXML;
-
 use NYTFeeds;
 
 has nytfeeds => sub {
     NYTFeeds->new(
         ua          => shift->ua->max_redirects(3),
-        rss_parser  => XML::RSS::LibXML->new
     );
 };
 
