@@ -1,4 +1,4 @@
-FROM tianon/mojo
+FROM perl
 
 COPY . /code
 WORKDIR /code
@@ -7,4 +7,4 @@ RUN cpanm App::cpm && cpm install -g Carton && cpm install
 
 EXPOSE 3000
 
-ENTRYPOINT ["/usr/local/bin/carton", "exec", "morbo", "script/cheese_cake"]
+ENTRYPOINT ["/usr/local/bin/carton", "exec", "perl", "local/bin/morbo", "script/cheese_cake"]
