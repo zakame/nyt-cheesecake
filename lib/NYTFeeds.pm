@@ -9,7 +9,7 @@ sub get_feeds_list {
     my $opml = $self->ua->get($feeds_url)->res;
     my ( @feeds, $id );
 
-    $opml->dom->find('outline[xmlUrl]')->each(
+    $opml->dom->find('outline')->each(
         sub {
             $id++;
             push @feeds => {
