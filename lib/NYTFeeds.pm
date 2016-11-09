@@ -2,7 +2,6 @@ package NYTFeeds;
 use Mojo::Base -base;
 
 has 'ua';
-has 'rss_parser';
 
 sub get_feeds_list {
     my ( $self, $feeds_url ) = @_;
