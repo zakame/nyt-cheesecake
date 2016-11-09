@@ -5,8 +5,9 @@ Just a weekend hack for #nytfeedfun, see [Dave Winer's challenge][0].
 [0]: http://scripting.com/2014/05/16/?#a1400253877
 
 Built with [Mojolicious][1], [ReactJS][2], and some boredom.  In fact,
-it is mainly a way for me to learn more about AngularJS and other frontend
-stuff, while retaining a solid backend in Perl :smiling_imp:
+it is mainly a way for me to learn more about AngularJS and other
+frontend stuff, while retaining a solid backend in Perl :smiling_imp:
+:cat: :smirk_cat: :heart_eyes_cat: :pouting_cat: :smiley_cat: :cat2:
 
 And, why _CheeseCake_?  Dave's post had an image of it, so there...
 
