@@ -9,18 +9,16 @@ sub get_feeds_list {
     my $opml = $self->ua->get($feeds_url)->res;
     my ( @feeds, $id );
 
-    $opml->dom->find('outline')->each(
-        sub {
-            $id++;
-            push @feeds => {
-                id      => $id,
-                title   => $_->{title},
-                type    => $_->{type},
-                xmlUrl  => $_->{xmlUrl},
-                htmlUrl => $_->{htmlUrl}
-            };
-        }
-    );
+    for my $feed ( $opml->dom->find('outline')->each ) {
+        $id++;
+        push @feeds => {
+            id      => $id,
+            title   => $feed->{title},
+            type    => $feed->{type},
+            xmlUrl  => $feed->{xmlUrl},
+            htmlUrl => $feed->{htmlUrl}
+        };
+    }
 
     wantarray ? @feeds : \@feeds;
 }
