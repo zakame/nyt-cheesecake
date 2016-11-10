@@ -5,6 +5,9 @@ use Mojo::Base 'Mojolicious';
 sub startup {
   my $self = shift;
 
+  # Configuration in ./cheese_cake.conf (mainly for deployment)
+  $self->plugin('Config');
+
   # Documentation browser under "/perldoc"
   $self->plugin('PODRenderer');
 
