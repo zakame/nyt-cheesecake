@@ -41,7 +41,7 @@ sub get_feed_items {
 
         my $img = $item->at('media\:content')->{url}
             if $item->at('media\:content');
-        $img =~ s/image\d+$//;
+        $img =~ s/image\d+$// if $img;
 
         push @{ $feed->{items} } => {
             dc => { creator => $item->at('dc\:creator')->content },
