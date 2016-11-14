@@ -1,5 +1,11 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  HTML-HTML5-Entities-0.004
+    pathname: T/TO/TOBYINK/HTML-HTML5-Entities-0.004.tar.gz
+    provides:
+      HTML::HTML5::Entities 0.004
+    requirements:
+      ExtUtils::MakeMaker 6.17
   Mojolicious-7.10
     pathname: S/SR/SRI/Mojolicious-7.10.tar.gz
     provides:

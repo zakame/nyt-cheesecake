@@ -1,5 +1,6 @@
 package NYTFeeds;
 use Mojo::Base -base;
+use HTML::HTML5::Entities;
 
 has 'ua';
 
@@ -45,15 +46,17 @@ sub get_feed_items {
 
         push @{ $feed->{items} } => {
             dc => { creator => $item->at('dc\:creator')->content },
-            description => $description,
+            description => _clean($description),
             guid        => $item->at('guid')->content,
             media       => { content => $img },
             pubDate     => $item->at('pubDate')->content,
-            title       => $item->at('title')->content
+            title       => _clean( $item->at('title')->content )
         };
     }
 
     $feed;
 }
+
+sub _clean { decode_entities(shift) }
 
 1;
