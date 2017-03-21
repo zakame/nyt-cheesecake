@@ -1,8 +1,8 @@
-FROM node
+FROM node:6.10.0
 
 COPY . /code
 WORKDIR /code
 
-RUN npm install -g yarn && yarn
+RUN npm -g update && yarn
 
 ENTRYPOINT ["/usr/local/bin/yarn", "start"]
